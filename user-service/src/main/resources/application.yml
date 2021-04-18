@@ -1,0 +1,24 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: USER-SERVICE
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/shoping?useSSL=false
+    username: root
+    password: P@ssw0rd
+    hikari:
+      maximum-pool-size: 50
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        enable_lazy_load_no_trans: true
+        proc:
+          param_null_passing: true
+    hibernate:
+      ddl-auto: none
+      use_sql_comments: true
+      format_sql: true

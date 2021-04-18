@@ -1,0 +1,26 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
+#  zipkin:
+#    base-url: http://127.0.0.1:9411/  
+  datasource:
+    url: jdbc:mysql://localhost:3306/shoping?useSSL=false
+    username: root
+    password: P@ssw0rd
+    hikari:
+      maximum-pool-size: 50
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        enable_lazy_load_no_trans: true
+        proc:
+          param_null_passing: true
+    hibernate:
+      ddl-auto: update
+      use_sql_comments: true
+      format_sql: true
